@@ -1,0 +1,30 @@
+spring:
+  datasource:
+    ### MYSQL CConfig ###
+    url: jdbc:mysql://localhost:3306/meeting_room
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: luan
+    password: Me@mo2056
+  ### H2 CConfig ###
+  #    url: jdbc:h2:mem:meeting
+  #    driver-class-name: org.h2.Driver
+  #    username: sa
+  #    password:
+  #  h2:
+  #    console:
+  #      enabled: true
+  #      path: /h2
+  jpa:
+    ### H2 CConfig ###
+    #    database: h2
+    #    database-platform: org.hibernate.dialect.H2Dialect
+
+    ### MYSQL CConfig ###
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 8080
